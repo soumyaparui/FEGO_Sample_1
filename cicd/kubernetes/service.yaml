@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: FEGO_Sample_1-service
+spec:
+  selector:
+    app:  FEGO_Sample_1
+  ports:
+    - name: https
+      port: 443
+      targetPort: 8080
+  type: LoadBalancer
